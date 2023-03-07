@@ -1,0 +1,84 @@
+import math
+print(math.floor(4.9))
+print(math.ceil(4.9))
+print("hello\'") ;  print("world")
+#字符串  直接加或者join
+str1="hello";
+str2="world";
+new_="-".join("hello")
+print(new_)
+print(str1+str2);
+print('点赞不要钱，投币您看着来')
+
+
+#声明一个列表 并使用下标访问元素
+names=['jack','leon','August tina','Mike','Justin']
+print(names[-1])
+print(names[len(names)-1])
+print(names[-5])
+print(names[1])
+
+#列表查询
+flag=0
+for name in names:
+    if name=="leon":
+        print("伍扬军")
+        flag=1
+        break;
+if flag==0:
+    print("null")
+    
+
+
+#一个更简单的方法
+if "jack" in names:
+    print("有jack")
+else: print("null")   
+
+#列表添加
+#append extend insert
+girls=[]
+girls.append("张沈心然")
+models=["A",'r','t']
+girls.extend(models)
+girls.insert(2,'谢安欣')
+print(girls)
+#
+
+#元组turple
+#只有一个元素时加逗号，否则视为字符串
+turple1=('leon',);
+print(turple1)
+
+#字典
+dict1={}#空字典
+dict2={'name':'leon','age':20,'weight':60};
+print(dict2['name'])
+print(dict2)
+dict2['age']=21
+print(dict2['age'])
+
+#字典函数
+#items
+dict5={'zhangsan':165,'lisi':155,'zhaoliu':175}
+print(dict5.items())
+for key,value in dict5.items():
+    if value>165:
+        print(key)
+
+#keys
+names1=dict5.keys()
+print(names1)
+
+#values
+heights=dict5.values()
+print(heights)
+total=sum(heights)
+avg=total/len(heights)
+print(avg)
+
+#交换
+a=1
+b=2
+a,b=b,a
+print(a)
